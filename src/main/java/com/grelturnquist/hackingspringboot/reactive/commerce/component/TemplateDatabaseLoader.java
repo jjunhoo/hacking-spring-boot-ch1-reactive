@@ -12,8 +12,8 @@ public class TemplateDatabaseLoader {
     @Bean
     CommandLineRunner initialize(MongoOperations mongo) { // 블로킹 버전의 MongoTemplate 를 사용하여 데이터 적재
         return args -> {
-            mongo.save(new Item("Alf alarm clock", 19.99));
-            mongo.save(new Item("Smurf TV tray", 24.99));
+            mongo.save(new Item("Alf alarm clock", "Clock",19.99));
+            mongo.save(new Item("Smurf TV tray", "TV",24.99));
         };
     }
 }
